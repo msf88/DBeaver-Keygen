@@ -65,10 +65,10 @@ jobs:
       # 步骤 3：核心同步操作：拉取上游仓库最新提交并合并到当前 Fork 仓库
       - name: Sync upstream changes
         id: sync  # 给该步骤设置唯一 ID，便于后续步骤判断该步骤的执行结果（成功/失败）
-        uses: owenxuan/DBeaver-Keygen
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
         with:
           # 配置项 1：上游仓库地址（格式：用户名/仓库名，对应原仓库的 GitHub 地址）
-          upstream_sync_repo: msojocs/fiddler-everywhere-enhance
+          upstream_sync_repo: owenxuan/DBeaver-Keygen
           # 配置项 2：上游仓库需要同步的分支（此处为 main 分支，需与原仓库分支保持一致）
           upstream_sync_branch: main
           # 配置项 3：当前 Fork 仓库需要接收同步的目标分支（此处为 main 分支，需与自身仓库分支保持一致）
